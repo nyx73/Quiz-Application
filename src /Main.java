@@ -86,6 +86,10 @@ System.out.println("           RESULT");
 System.out.println("================================");
 System.out.println("Correct Answers : " + score);
 System.out.println("Total Questions : " + questions.size());
+
+double percentage = (double) score / questions.size() * 100;
+
+System.out.println("Score           : " + (int) percentage + "%");
 System.out.println("================================");
         sc.close();
     }
