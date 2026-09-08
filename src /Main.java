@@ -58,6 +58,7 @@ public class Main {
         System.out.println("       JAVA QUIZ APPLICATION");
         System.out.println("================================");
 
+        int score = 0;
         for (int i = 0; i < questions.size(); i++) {
 
             Question q = questions.get(i);
@@ -74,12 +75,18 @@ public class Main {
 
 if (answer.equalsIgnoreCase(q.correctAnswer)) {
     System.out.println("Correct! ✓");
+    score++;
 } else {
     System.out.println("Wrong! ✗");
 }
-            System.out.println("You selected: " + answer);
+        System.out.println("You selected: " + answer);
         }
-
+System.out.println("\n================================");
+System.out.println("           RESULT");
+System.out.println("================================");
+System.out.println("Correct Answers : " + score);
+System.out.println("Total Questions : " + questions.size());
+System.out.println("================================");
         sc.close();
     }
 }
