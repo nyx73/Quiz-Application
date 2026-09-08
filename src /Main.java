@@ -58,7 +58,23 @@ public class Main {
         System.out.println("       JAVA QUIZ APPLICATION");
         System.out.println("================================");
 
-        System.out.println("\nTotal Questions: " + questions.size());
+        for (int i = 0; i < questions.size(); i++) {
+
+            Question q = questions.get(i);
+
+            System.out.println("\nQuestion " + (i + 1) + ":");
+            System.out.println(q.questionText);
+
+            System.out.println("A. " + q.optionA);
+            System.out.println("B. " + q.optionB);
+            System.out.println("C. " + q.optionC);
+            System.out.println("D. " + q.optionD);
+
+            System.out.print("Your answer: ");
+            String answer = sc.nextLine();
+
+            System.out.println("You selected: " + answer);
+        }
 
         sc.close();
     }
