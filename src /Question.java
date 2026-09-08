@@ -17,4 +17,18 @@ public class Question {
         this.optionD = optionD;
         this.correctAnswer = correctAnswer;
     }
+
+    public void displayQuestion() {
+
+        System.out.println(questionText);
+        System.out.println("A. " + optionA);
+        System.out.println("B. " + optionB);
+        System.out.println("C. " + optionC);
+        System.out.println("D. " + optionD);
+    }
+
+    public boolean isCorrect(String answer) {
+
+        return answer.equalsIgnoreCase(correctAnswer);
+    }
 }
