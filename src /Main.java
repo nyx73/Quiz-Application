@@ -66,14 +66,11 @@ public class Main {
             System.out.println("\nQuestion " + (i + 1) + ":");
             System.out.println(q.questionText);
 
-            System.out.println("A. " + q.optionA);
-            System.out.println("B. " + q.optionB);
-            System.out.println("C. " + q.optionC);
-            System.out.println("D. " + q.optionD);
+            q.displayQuestion();
 
            String answer = sc.nextLine();
 
-if (answer.equalsIgnoreCase(q.correctAnswer)) {
+if (q.isCorrect(answer)) { {
     System.out.println("Correct! ✓");
     score++;
 } else {
