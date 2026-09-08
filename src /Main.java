@@ -70,9 +70,13 @@ public class Main {
             System.out.println("C. " + q.optionC);
             System.out.println("D. " + q.optionD);
 
-            System.out.print("Your answer: ");
-            String answer = sc.nextLine();
+           String answer = sc.nextLine();
 
+if (answer.equalsIgnoreCase(q.correctAnswer)) {
+    System.out.println("Correct! ✓");
+} else {
+    System.out.println("Wrong! ✗");
+}
             System.out.println("You selected: " + answer);
         }
 
